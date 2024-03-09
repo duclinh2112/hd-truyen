@@ -3,35 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb-light: 0, 0, 0;
-  --background-start-rgb-light: 214, 219, 220;
-  --background-end-rgb-light: 255, 255, 255;
+  --bg-primary-light: #F0F1F3;
+  --bg-primary-dark: #222;
+  --bg-black: #000000;
 
-  --foreground-rgb-dark: 255, 255, 255;
-  --background-start-rgb-dark: 0, 0, 0;
-  --background-end-rgb-dark: 0, 0, 0;
+  --background-light: var(--bg-primary-light);
+  --background-header-light: var(--bg-black);
+  --background-footer-light: var(--bg-black);
+  --text-primary-light: var(--bg-black);
+
+  --background-dark: var(--bg-primary-dark);
+  --background-header-dark: var(--bg-primary-light);
+  --background-footer-dark: var(--bg-primary-light);
+  --text-primary-dark: var(--bg-primary-light);
 }
 
 [data-theme='light'] {
-  --foreground-rgb: var(--foreground-rgb-light);
-  --background-start-rgb: var(--background-start-rgb-light);
-  --background-end-rgb: var(--background-end-rgb-light);
+  --background: var(--background-light);
+  --background-header: var(--background-header-light);
+  --background-footer: var(--background-footer-light);
+  --text-primary: var(--text-primary-light);
+  --text-header: var(--background-light);
 }
 
 [data-theme='dark'] {
-  --foreground-rgb: var(--foreground-rgb-dark);
-  --background-start-rgb: var(--background-start-rgb-dark);
-  --background-end-rgb: var(--background-end-rgb-dark);
+  --background: var(--background-dark);
+  --background-header: var(--background-header-dark);
+  --background-footer: var(--background-footer-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-header: var(--background-dark);
+}
+
+html,
+body,
+#__next {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-primary);
+  background: var(--background)
 }
 
 @layer utilities {
