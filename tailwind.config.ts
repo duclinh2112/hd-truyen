@@ -16,10 +16,12 @@ const config: Config = {
       },
       backgroundColor: {
         header: 'var(--background-header)',
+        main: 'var(--background)',
         footer: 'var(--background-footer)',
       },
       colors: {
         header: 'var(--text-header)',
+        main: 'var(--text-primary)',
         footer: 'var(--text-header)',
       },
     },
