@@ -43,7 +43,8 @@ body,
 
 body {
   color: var(--text-primary);
-  background: var(--background)
+  background: var(--background);
+  font-size: 14px;
 }
 
 @layer utilities {
