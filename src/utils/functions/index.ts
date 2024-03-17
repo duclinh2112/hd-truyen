@@ -1,4 +1,4 @@
-import moment from "moment"
+import moment from 'moment'
 
 const dateFormat = 'DD/MM/YYYY'
 
@@ -37,8 +37,4 @@ const toSlug = (str: string) => {
   return str
 }
 
-export {
-  formatDate,
-  formatDateAgo,
-  toSlug
-}
+export { formatDate, formatDateAgo, toSlug }

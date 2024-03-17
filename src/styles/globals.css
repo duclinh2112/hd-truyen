@@ -47,6 +47,31 @@ body {
   font-size: 14px;
 }
 
+.swiper .swiper-slide {
+  transform: scale(0.97) translateZ(0) !important;
+  transition: transform 0.25s;
+}
+
+.swiper .swiper-slide-active {
+  transform: scale(1)  translateZ(0) !important;
+}
+
+#pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+#pagination .swiper-pagination-bullet {
+  background: #64748B;
+  opacity: 1;
+}
+
+#pagination .swiper-pagination-bullet.bullet-active {
+  background: #D9D9D9;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

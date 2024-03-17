@@ -1,36 +1,37 @@
 import React, { useEffect } from 'react'
+
 import { LOCAL_KEY } from '../constants'
 
 const useTheme = () => {
   const [theme, setTheme] = React.useState<string>('light')
-  const [darkQuery, setDarkQuery] = React.useState<MediaQueryList | any>();
+  const [darkQuery, setDarkQuery] = React.useState<MediaQueryList | any>()
 
   const handleSelectTheme = (theme: string) => {
     setTheme(theme)
   }
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem(LOCAL_KEY.LTheme);
+    const savedTheme = localStorage.getItem(LOCAL_KEY.LTheme)
     if (savedTheme) {
-      setTheme(savedTheme);
+      setTheme(savedTheme)
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      console.log(window.matchMedia('(prefers-color-scheme: dark)'));
-      
+      console.log(window.matchMedia('(prefers-color-scheme: dark)'))
+
       setDarkQuery(window.matchMedia('(prefers-color-scheme: dark)'))
-      darkQuery && darkQuery.addEventListener('change', (e: any) => {
-        if (!('LTheme' in localStorage)) {
-          if (e.matches) {
-            document.querySelectorAll('html')[0].dataset.theme = 'dark'
-          } else {
-            document.querySelectorAll('html')[0].dataset.theme = 'light'
+      darkQuery &&
+        darkQuery.addEventListener('change', (e: any) => {
+          if (!('LTheme' in localStorage)) {
+            if (e.matches) {
+              document.querySelectorAll('html')[0].dataset.theme = 'dark'
+            } else {
+              document.querySelectorAll('html')[0].dataset.theme = 'light'
+            }
           }
-        }
-      })
-    
+        })
     }
   }, [])
 
