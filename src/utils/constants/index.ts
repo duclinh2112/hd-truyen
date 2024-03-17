@@ -4,5 +4,5 @@ export function isEmpty(obj?: object) {
 }
 
 export const LOCAL_KEY = {
-  LTheme: 'LTheme'
+  LTheme: 'LTheme',
 }

@@ -1,8 +1,12 @@
 import React from 'react'
 
+import SliderBanner from './ui/SliderBanner'
+
 const TemplateHome = () => {
   return (
-    <div>TemplateHome</div>
+    <>
+      <SliderBanner />
+    </>
   )
 }
 
