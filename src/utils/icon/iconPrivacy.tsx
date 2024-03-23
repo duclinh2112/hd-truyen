@@ -1,11 +1,11 @@
 import React from 'react'
 
-type IconPrivacy = {
+type IconPrivacyProps = {
   width?: number
   height?: number
   stroke?: string
 }
-const iconPrivacy = ({ width, height, stroke }: IconPrivacy) => {
+const IconPrivacy = ({ width, height, stroke }: IconPrivacyProps) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -41,4 +41,4 @@ const iconPrivacy = ({ width, height, stroke }: IconPrivacy) => {
   )
 }
 
-export default iconPrivacy
+export default IconPrivacy
